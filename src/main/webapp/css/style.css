@@ -1,0 +1,1110 @@
+/* Universal Box-Sizing for Easier Layouts */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+
+    /* Background image properties with updated path */
+    background-image: url('../asset/bg_image.jpg'); /* Adjust this path based on your actual CSS file location */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+/* Google Fonts Import (Add this to the very top of your style.css or in your HTML <head>) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+
+/* Welcome Container Styling */
+.welcome-container {
+    background-color: #FFF; /* Creamy white for the container */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+/* Header Styling */
+h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Navigation Links Styling */
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between links */
+}
+
+.auth-links a {
+    text-decoration: none;
+    background-color: #D2B48C; /* Soft beige/saffron accent */
+    color: #FFF;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+}
+
+.auth-links a:hover {
+    background-color: #CD853F; /* Slightly darker terracotta/saffron on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* You might want to add specific styles for customer sign-up/sign-in pages later */
+/* For example, for a secondary button or different emphasis */
+/* .auth-links a:first-child { background-color: #8FBC8F; } /* Earthy green for one option */
+/* .auth-links a:last-child { background-color: #CD853F; } /* Turmeric yellow for another */
+
+
+/* Add to your existing style.css file */
+
+/* Form Container Styling */
+.form-container {
+    background-color: #FFF; /* Creamy white for the container */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Slightly wider for forms */
+    margin: 20px auto; /* Center the form and add some margin */
+}
+
+/* Override body styles for this page if needed, otherwise inherit */
+/* For example, if you want the form centered vertically like the welcome page: */
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+
+.form-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+/* Form Group (Label + Input) Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels and inputs to the left within their group */
+}
+
+.form-group label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DCDCDC; /* Light grey border */
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #CD853F; /* Turmeric yellow/saffron on focus */
+    box-shadow: 0 0 0 3px rgba(205, 133, 63, 0.2); /* Soft glow */
+}
+
+/* Submit Button Styling */
+.submit-button {
+    text-decoration: none;
+    background-color: #8FBC8F; /* Earthy green accent */
+    color: #FFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Space above the button */
+    width: 100%; /* Make button full width of container */
+    max-width: 250px; /* Limit button width */
+}
+
+.submit-button:hover {
+    background-color: #6B8E23; /* Darker earthy green on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Message Styling (for JSP success/failure messages) */
+.message {
+    margin-top: 25px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.success-message {
+    color: #367D36; /* Darker green for success text */
+    background-color: #E6FFE6; /* Light green background */
+    border: 1px solid #C0DCC0;
+}
+
+.error-message {
+    color: #B22222; /* Darker red for error text */
+    background-color: #FFE6E6; /* Light red background */
+    border: 1px solid #DCC0C0;
+}
+
+
+/* Add to your existing style.css file */
+
+/* Ensure the body styles from index.html are applied for centering */
+/* body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+} */
+
+/* .form-container styles are already defined, they will apply here too. */
+/* You can add specific overrides if needed, e.g.: */
+/* .form-container.signin-page { max-width: 400px; } */
+
+
+/* .form-container h1 styles are already defined. */
+/* .form-group styles are already defined. */
+/* .form-group label styles are already defined. */
+/* .form-group input styles are already defined. */
+/* .form-group input:focus styles are already defined. */
+/* .submit-button styles are already defined. */
+/* .message, .success-message, .error-message styles are already defined. */
+
+/* If you want a slightly different header for the sign-in page, you can create a specific rule */
+/* .form-container h1 {
+    font-size: 2em; /* Slightly smaller for sign-in if desired */
+/* } */
+
+/* Specific button color for sign-in if different from sign-up. */
+/* For example, if you want a terracotta button for sign-in: */
+/* .form-container .submit-button {
+    background-color: #A0522D;
+} */
+
+/* .form-container .submit-button:hover {
+    background-color: #8B4513;
+} */
+
+
+/* Add to your existing style.css file */
+
+/* Dashboard Container Styling */
+.dashboard-container {
+    background-color: #FFF; /* Creamy white base */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 90%;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 20px auto; /* Center the container and add some margin */
+}
+
+.dashboard-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.8em;
+}
+
+.dashboard-container h2 { /* For "No Customer found" message */
+    font-family: 'Merriweather', serif;
+    color: #B22222; /* Darker red for error message */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Navigation Links */
+.dashboard-nav {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Space between links */
+    margin-top: 30px;
+}
+
+.dashboard-nav a {
+    text-decoration: none;
+    background-color: #D2B48C; /* Soft beige/saffron accent */
+    color: #FFF;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    display: block; /* Make links take full width */
+    max-width: 300px; /* Limit width of links */
+    margin: 0 auto; /* Center links */
+}
+
+.dashboard-nav a:hover {
+    background-color: #CD853F; /* Slightly darker saffron/terracotta on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Specific link colors (optional, based on your accent palette) */
+.dashboard-nav a:nth-child(1) { /* View Menu */
+    background-color: #8FBC8F; /* Earthy green */
+}
+
+.dashboard-nav a:nth-child(1):hover {
+    background-color: #6B8E23; /* Darker earthy green */
+}
+
+.dashboard-nav a:nth-child(2) { /* View Cart */
+    background-color: #CD853F; /* Turmeric yellow */
+}
+
+.dashboard-nav a:nth-child(2):hover {
+    background-color: #A0522D; /* Terracotta */
+}
+
+.dashboard-nav a:nth-child(3) { /* Sign Out */
+    background-color: #A0522D; /* Terracotta */
+}
+
+.dashboard-nav a:nth-child(3):hover {
+    background-color: #8B4513; /* Darker terracotta */
+}
+
+/* Ensure existing .message, .error-message styles apply to the "No Customer found" div */
+
+/* Add to your existing style.css file */
+
+/* Menu Container */
+.menu-container {
+    background-color: #FFF; /* Creamy white base */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 95%; /* Make it wider for the table */
+    max-width: 1000px; /* Adjust max-width as needed */
+    margin: 30px auto; /* Center the container and add margin */
+    text-align: center;
+}
+
+.menu-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.8em;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #F0F0F0;
+    color: #333;
+}
+
+/* Table Styling */
+.food-list-table {
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens if table is too wide */
+    margin-bottom: 25px;
+}
+
+.food-list-table table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between cell borders */
+    margin: 0 auto;
+    background-color: #FDFDFD; /* Slightly off-white for table background */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners are applied to table contents */
+}
+
+.food-list-table th,
+.food-list-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #EDEDED; /* Light separator */
+}
+
+.food-list-table th {
+    background-color: #D2B48C; /* Soft beige/saffron for table headers */
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+.food-list-table tr:nth-child(even) {
+    background-color: #F8F8F8; /* Subtle stripe for readability */
+}
+
+.food-list-table tr:hover {
+    background-color: #FAF2E6; /* Light cream/saffron on hover */
+}
+
+.food-list-table td {
+    color: #444;
+    font-size: 0.95em;
+}
+
+.no-items-message {
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    color: #777;
+    font-style: italic;
+}
+
+/* Add to Cart Form and Elements */
+.add-to-cart-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the form elements in the cell */
+    gap: 8px; /* Space between input and button */
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.quantity-input:focus {
+    outline: none;
+    border-color: #CD853F; /* Turmeric yellow/saffron on focus */
+    box-shadow: 0 0 0 2px rgba(205, 133, 63, 0.2);
+}
+
+.add-to-cart-button {
+    background-color: #8FBC8F; /* Earthy green accent */
+    color: #FFF;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #6B8E23; /* Darker earthy green on hover */
+    transform: translateY(-1px);
+}
+
+/* Message Styling (reusing existing classes) */
+.message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    width: fit-content; /* Adjust width to content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success-message {
+    color: #367D36; /* Darker green for success text */
+    background-color: #E6FFE6; /* Light green background */
+    border: 1px solid #C0DCC0;
+}
+
+.error-message {
+    color: #B22222; /* Darker red for error text */
+    background-color: #FFE6E6; /* Light red background */
+    border: 1px solid #DCC0C0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 20px;
+    }
+
+    .food-list-table th,
+    .food-list-table td {
+        padding: 10px;
+    }
+
+    .food-list-table th {
+        font-size: 0.8em;
+    }
+
+    .food-list-table td {
+        font-size: 0.85em;
+    }
+
+    .add-to-cart-form {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .quantity-input {
+        width: 100%; /* Full width in column layout */
+    }
+
+    .add-to-cart-button {
+        width: 100%; /* Full width in column layout */
+    }
+}
+
+/* Add to your existing style.css file */
+
+/* Cart Container */
+.cart-container {
+    background-color: #FFF; /* Creamy white base */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 95%;
+    max-width: 900px; /* Adjust max-width as needed */
+    margin: 30px auto;
+    text-align: center;
+}
+
+.cart-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.8em;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+    font-family: 'Open Sans', sans-serif;
+    color: #777;
+    font-size: 1.1em;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* Cart Table Wrapper (for responsiveness) */
+.cart-table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    margin-bottom: 25px;
+}
+
+/* Cart Table Styling - Reusing principles from Food Menu table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #FDFDFD;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.cart-table th {
+    background-color: #D2B48C; /* Soft beige/saffron for table headers */
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+.cart-table tr:hover {
+    background-color: #FAF2E6; /* Light cream/saffron on hover */
+}
+
+.cart-table td {
+    color: #444;
+    font-size: 0.95em;
+}
+
+/* Specific styling for the remove link column */
+.cart-table td.remove-cell {
+    text-align: center;
+}
+
+.remove-link {
+    display: inline-block;
+    color: #A0522D; /* Terracotta color for remove link */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid #A0522D;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.remove-link:hover {
+    background-color: #A0522D;
+    color: #FFF;
+    transform: translateY(-1px);
+}
+
+/* Table Footer (Grand Total) */
+.cart-table tfoot .grand-total-row {
+    background-color: #F0E6D0; /* Slightly darker beige/cream for total row */
+    font-weight: 700;
+    border-top: 2px solid #D2B48C; /* Accent line above total */
+}
+
+.cart-table tfoot .grand-total-label {
+    text-align: right;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-table tfoot .grand-total-value {
+    font-size: 1.2em;
+    color: #A0522D; /* Terracotta for total value */
+    text-align: left; /* Align value to left in its cell */
+}
+
+
+/* Message Styling (reusing existing classes) */
+.message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success-message {
+    color: #367D36;
+    background-color: #E6FFE6;
+    border: 1px solid #C0DCC0;
+}
+
+.error-message {
+    color: #B22222;
+    background-color: #FFE6E6;
+    border: 1px solid #DCC0C0;
+}
+
+/* Cart Actions / Back to Dashboard Link */
+.cart-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dashboard-link {
+    display: inline-block;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-link:hover {
+    background-color: #F0F0F0;
+    color: #333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 20px;
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .cart-table th {
+        font-size: 0.75em;
+    }
+
+    .remove-link {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+
+    .cart-table tfoot .grand-total-label,
+    .cart-table tfoot .grand-total-value {
+        font-size: 1em;
+    }
+}
+
+/* Admin Panel */
+
+/* Add to your existing style.css file */
+
+/* Admin Panel Container */
+.admin-panel-container {
+    background-color: #FFF; /* Creamy white base */
+    padding: 50px 70px; /* Slightly larger padding for a grander feel */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow */
+    text-align: center;
+    width: 90%;
+    max-width: 550px; /* Adjust max-width as needed */
+    margin: 50px auto; /* Center with more vertical margin */
+}
+
+.admin-panel-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 40px; /* More space below heading */
+    font-size: 3em; /* Larger font size for main heading */
+    letter-spacing: 1px;
+}
+
+/* Admin Sign In Link */
+.admin-signin-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #D2B48C; /* Soft beige/saffron accent for button */
+    color: #FFF;
+    padding: 18px 40px; /* Larger button padding */
+    border-radius: 8px;
+    font-weight: 700; /* Bolder text */
+    font-size: 1.2em; /* Larger font size for button */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(210, 180, 140, 0.4); /* Subtle shadow for button */
+}
+
+.admin-signin-link:hover {
+    background-color: #CD853F; /* Darker saffron/terracotta on hover */
+    transform: translateY(-3px); /* More pronounced lift effect */
+    box-shadow: 0 6px 15px rgba(205, 133, 63, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Ensure body styles from previous steps apply for centering */
+/* body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+} */	
+
+/* Add to your existing style.css file */
+
+/* The .form-container, .form-group, label, input, and .submit-button styles
+   defined for customer forms will automatically apply here, ensuring consistency. */
+
+/* If you want specific styles for the Admin Sign-In H1 (optional) */
+.form-container h1 {
+    /* For instance, if you want a slightly different shade of terracotta, or size */
+    /* color: #B25F3F; */ /* A slightly darker terracotta */
+    /* font-size: 2.4em; */
+}
+
+/* If you want the admin sign-in button to have a different color (optional) */
+/* .form-container .submit-button {
+    background-color: #A0522D; /* Terracotta for admin button */
+/* } */
+
+/* .form-container .submit-button:hover {
+    background-color: #8B4513; /* Darker terracotta on hover */
+/* } */
+
+
+/* Add to your existing style.css file */
+
+/* Admin Dashboard Container Styling */
+.admin-dashboard-container {
+    background-color: #FFF; /* Creamy white base */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Adjust max-width as needed */
+    margin: 50px auto; /* Center the container and add more margin */
+}
+
+.admin-dashboard-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.8em;
+}
+
+/* Admin Dashboard Navigation Links */
+.admin-dashboard-nav {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Space between links */
+    margin-top: 30px;
+}
+
+.admin-nav-link {
+    text-decoration: none;
+    background-color: #D2B48C; /* Soft beige/saffron accent */
+    color: #FFF;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    display: block; /* Make links take full width */
+    max-width: 300px; /* Limit width of links */
+    margin: 0 auto; /* Center links */
+}
+
+.admin-nav-link:hover {
+    background-color: #CD853F; /* Slightly darker saffron/terracotta on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Specific link colors for Admin Dashboard (optional, based on your accent palette) */
+.admin-dashboard-nav .admin-nav-link:nth-child(1) { /* Add Food Item */
+    background-color: #8FBC8F; /* Earthy green */
+}
+
+.admin-dashboard-nav .admin-nav-link:nth-child(1):hover {
+    background-color: #6B8E23; /* Darker earthy green */
+}
+
+.admin-dashboard-nav .admin-nav-link:nth-child(2) { /* Delete Food Item */
+    background-color: #CD853F; /* Turmeric yellow */
+}
+
+.admin-dashboard-nav .admin-nav-link:nth-child(2):hover {
+    background-color: #A0522D; /* Terracotta */
+}
+
+.admin-dashboard-nav .signout-link { /* Sign Out link */
+    background-color: #A0522D; /* Terracotta */
+}
+
+.admin-dashboard-nav .signout-link:hover {
+    background-color: #8B4513; /* Darker terracotta */
+}
+
+/* Ensure the body styles from index.html are applied for overall centering */
+/* body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+} */
+
+/* Add to your existing style.css file */
+
+/* Universal input styling for form-groups */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] { /* <--- MAKE SURE THIS IS INCLUDED */
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DCDCDC; /* Light grey border */
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea,
+.form-group select { /* This is the code you just shared, it's correct for these elements */
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFF;
+}
+
+/* Focus styles for all relevant form elements */
+.form-group input:focus,
+.form-group textarea:focus, /* <--- Also ensure textarea and select are included here */
+.form-group select:focus {
+    outline: none;
+    border-color: #CD853F; /* Turmeric yellow/saffron on focus */
+    box-shadow: 0 0 0 3px rgba(205, 133, 63, 0.2); /* Soft glow */
+}
+
+/* Style for placeholder text */
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+/* Style for select options (if needed, though browser default is common) */
+.form-group select option {
+    color: #333;
+    background-color: #FFF;
+}
+
+/* Form Buttons Group */
+.form-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Main submit button (reusing .submit-button) */
+.submit-button {
+    /* Styles are already defined in previous steps */
+    /* background-color: #8FBC8F; */ /* Earthy green accent */
+    /* color: #FFF; */
+    /* padding: 15px 30px; */
+    /* ... other existing styles ... */
+    min-width: 150px; /* Ensure button has a minimum width */
+}
+
+/* Secondary Button (Back to Dashboard) */
+.secondary-button {
+    display: inline-block; /* Essential for padding/margin */
+    text-decoration: none;
+    background-color: #F8F8F8; /* Off-white/light beige for secondary */
+    color: #555;
+    padding: 15px 30px;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    min-width: 150px;
+}
+
+.secondary-button:hover {
+    background-color: #F0F0F0;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Message styling (reusing existing classes) */
+/* .message, .success-message, .error-message are already defined */
+
+/* Add to your existing style.css file */
+
+/* List Container (reusing menu-container principles) */
+.list-container {
+    background-color: #FFF; /* Creamy white base */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 95%; /* Wider for table content */
+    max-width: 1000px; /* Adjust max-width as needed */
+    margin: 30px auto; /* Center the container */
+    text-align: center;
+}
+
+.list-container h1 {
+    font-family: 'Merriweather', serif; /* Serif for headers */
+    color: #A0522D; /* Terracotta accent */
+    margin-bottom: 30px;
+    font-size: 2.8em;
+}
+
+/* Back Link (reusing .back-link from food menu) */
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #F0F0F0;
+    color: #333;
+}
+
+/* Food List Table Styling (reusing .food-list-table from food menu) */
+.food-list-table {
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    margin-bottom: 25px;
+}
+
+.food-list-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #FDFDFD;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.food-list-table th,
+.food-list-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.food-list-table th {
+    background-color: #D2B48C; /* Soft beige/saffron for headers */
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+.food-list-table tr:nth-child(even) {
+    background-color: #F8F8F8; /* Subtle stripe */
+}
+
+.food-list-table tr:hover {
+    background-color: #FAF2E6; /* Light cream/saffron on hover */
+}
+
+.food-list-table td {
+    color: #444;
+    font-size: 0.95em;
+}
+
+/* "No items" message (reusing .no-items-message) */
+.no-items-message {
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    color: #777;
+    font-style: italic;
+}
+
+/* Delete Link Specific Styling */
+.delete-link {
+    display: inline-block;
+    color: #B22222; /* Darker red for delete */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid #B22222;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-link:hover {
+    background-color: #B22222;
+    color: #FFF;
+    transform: translateY(-1px);
+}
+
+/* Remove cell (for alignment) */
+.remove-cell {
+    text-align: center;
+}
+
+/* Message Styling (reusing existing .message, .success-message, .error-message) */
+.message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success-message {
+    color: #367D36;
+    background-color: #E6FFE6;
+    border: 1px solid #C0DCC0;
+}
+
+.error-message {
+    color: #B22222;
+    background-color: #FFE6E6;
+    border: 1px solid #DCC0C0;
+}
+
+/* Responsive adjustments (reusing from food menu) */
+@media (max-width: 768px) {
+    .list-container {
+        padding: 20px;
+    }
+
+    .food-list-table th,
+    .food-list-table td {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .food-list-table th {
+        font-size: 0.75em;
+    }
+
+    .delete-link {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+}
